@@ -19,6 +19,19 @@
 		E451D71B179AD5AC00A68C64 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E451D719179AD5AC00A68C64 /* MainStoryboard_iPhone.storyboard */; };
 		E451D71E179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E451D71C179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard */; };
 		E451D721179AD5AC00A68C64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D720179AD5AC00A68C64 /* ViewController.m */; };
+		E451D729179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E451D728179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg */; };
+		E451D732179ADFC500A68C64 /* MBDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D72C179ADFC500A68C64 /* MBDispatch.m */; };
+		E451D733179ADFC500A68C64 /* MBGlobalDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D72E179ADFC500A68C64 /* MBGlobalDefaults.m */; };
+		E451D734179ADFC500A68C64 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D731179ADFC500A68C64 /* MBProgressHUD.m */; };
+		E451D748179AE01800A68C64 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D737179AE01800A68C64 /* GradientButton.m */; };
+		E451D749179AE01800A68C64 /* MBNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D739179AE01800A68C64 /* MBNSString.m */; };
+		E451D74A179AE01800A68C64 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D73B179AE01800A68C64 /* NSArrayAdditions.m */; };
+		E451D74B179AE01800A68C64 /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D73D179AE01800A68C64 /* NSDictionaryAdditions.m */; };
+		E451D74D179AE01800A68C64 /* NSMutableArrayStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D741179AE01800A68C64 /* NSMutableArrayStack.m */; };
+		E451D74E179AE01800A68C64 /* ObjectToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D743179AE01800A68C64 /* ObjectToDictionary.m */; };
+		E451D74F179AE01800A68C64 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D745179AE01800A68C64 /* UIScrollViewAdditions.m */; };
+		E451D750179AE01800A68C64 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D747179AE01800A68C64 /* UIViewAdditions.m */; };
+		E451D753179AE98200A68C64 /* UIImageViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D752179AE98200A68C64 /* UIImageViewAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,15 +43,41 @@
 		E451D70B179AD5AC00A68C64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E451D70D179AD5AC00A68C64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E451D70F179AD5AC00A68C64 /* ZoomTag-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZoomTag-Prefix.pch"; sourceTree = "<group>"; };
-		E451D710179AD5AC00A68C64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E451D711179AD5AC00A68C64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E451D710179AD5AC00A68C64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ZoomTag/AppDelegate.h; sourceTree = "<group>"; };
+		E451D711179AD5AC00A68C64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ZoomTag/AppDelegate.m; sourceTree = "<group>"; };
 		E451D713179AD5AC00A68C64 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E451D715179AD5AC00A68C64 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E451D717179AD5AC00A68C64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E451D71A179AD5AC00A68C64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E451D71D179AD5AC00A68C64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E451D71F179AD5AC00A68C64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E451D720179AD5AC00A68C64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E451D71F179AD5AC00A68C64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ZoomTag/ViewController.h; sourceTree = "<group>"; };
+		E451D720179AD5AC00A68C64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ZoomTag/ViewController.m; sourceTree = "<group>"; };
+		E451D728179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg"; sourceTree = "<group>"; };
+		E451D72B179ADFC500A68C64 /* MBDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDispatch.h; sourceTree = "<group>"; };
+		E451D72C179ADFC500A68C64 /* MBDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDispatch.m; sourceTree = "<group>"; };
+		E451D72D179ADFC500A68C64 /* MBGlobalDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBGlobalDefaults.h; sourceTree = "<group>"; };
+		E451D72E179ADFC500A68C64 /* MBGlobalDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBGlobalDefaults.m; sourceTree = "<group>"; };
+		E451D72F179ADFC500A68C64 /* MBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLog.h; sourceTree = "<group>"; };
+		E451D730179ADFC500A68C64 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E451D731179ADFC500A68C64 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E451D736179AE01800A68C64 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
+		E451D737179AE01800A68C64 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		E451D738179AE01800A68C64 /* MBNSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNSString.h; sourceTree = "<group>"; };
+		E451D739179AE01800A68C64 /* MBNSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNSString.m; sourceTree = "<group>"; };
+		E451D73A179AE01800A68C64 /* NSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayAdditions.h; sourceTree = "<group>"; };
+		E451D73B179AE01800A68C64 /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayAdditions.m; sourceTree = "<group>"; };
+		E451D73C179AE01800A68C64 /* NSDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryAdditions.h; sourceTree = "<group>"; };
+		E451D73D179AE01800A68C64 /* NSDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryAdditions.m; sourceTree = "<group>"; };
+		E451D740179AE01800A68C64 /* NSMutableArrayStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayStack.h; sourceTree = "<group>"; };
+		E451D741179AE01800A68C64 /* NSMutableArrayStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayStack.m; sourceTree = "<group>"; };
+		E451D742179AE01800A68C64 /* ObjectToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectToDictionary.h; sourceTree = "<group>"; };
+		E451D743179AE01800A68C64 /* ObjectToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectToDictionary.m; sourceTree = "<group>"; };
+		E451D744179AE01800A68C64 /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
+		E451D745179AE01800A68C64 /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
+		E451D746179AE01800A68C64 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		E451D747179AE01800A68C64 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		E451D751179AE98200A68C64 /* UIImageViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewAdditions.h; sourceTree = "<group>"; };
+		E451D752179AE98200A68C64 /* UIImageViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +97,12 @@
 		E451D6F5179AD5AC00A68C64 = {
 			isa = PBXGroup;
 			children = (
+				E451D727179AD61400A68C64 /* View Controllers */,
 				E451D707179AD5AC00A68C64 /* ZoomTag */,
 				E451D700179AD5AC00A68C64 /* Frameworks */,
 				E451D6FF179AD5AC00A68C64 /* Products */,
+				E451D728179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg */,
+				E451D72A179ADFC500A68C64 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,12 +127,8 @@
 		E451D707179AD5AC00A68C64 /* ZoomTag */ = {
 			isa = PBXGroup;
 			children = (
-				E451D710179AD5AC00A68C64 /* AppDelegate.h */,
-				E451D711179AD5AC00A68C64 /* AppDelegate.m */,
 				E451D719179AD5AC00A68C64 /* MainStoryboard_iPhone.storyboard */,
 				E451D71C179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard */,
-				E451D71F179AD5AC00A68C64 /* ViewController.h */,
-				E451D720179AD5AC00A68C64 /* ViewController.m */,
 				E451D708179AD5AC00A68C64 /* Supporting Files */,
 			);
 			path = ZoomTag;
@@ -108,6 +146,57 @@
 				E451D717179AD5AC00A68C64 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E451D727179AD61400A68C64 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E451D710179AD5AC00A68C64 /* AppDelegate.h */,
+				E451D711179AD5AC00A68C64 /* AppDelegate.m */,
+				E451D71F179AD5AC00A68C64 /* ViewController.h */,
+				E451D720179AD5AC00A68C64 /* ViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E451D72A179ADFC500A68C64 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E451D735179AE01800A68C64 /* libAdditions */,
+				E451D72B179ADFC500A68C64 /* MBDispatch.h */,
+				E451D72C179ADFC500A68C64 /* MBDispatch.m */,
+				E451D72D179ADFC500A68C64 /* MBGlobalDefaults.h */,
+				E451D72E179ADFC500A68C64 /* MBGlobalDefaults.m */,
+				E451D72F179ADFC500A68C64 /* MBLog.h */,
+				E451D730179ADFC500A68C64 /* MBProgressHUD.h */,
+				E451D731179ADFC500A68C64 /* MBProgressHUD.m */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E451D735179AE01800A68C64 /* libAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				E451D736179AE01800A68C64 /* GradientButton.h */,
+				E451D737179AE01800A68C64 /* GradientButton.m */,
+				E451D738179AE01800A68C64 /* MBNSString.h */,
+				E451D739179AE01800A68C64 /* MBNSString.m */,
+				E451D73A179AE01800A68C64 /* NSArrayAdditions.h */,
+				E451D73B179AE01800A68C64 /* NSArrayAdditions.m */,
+				E451D73C179AE01800A68C64 /* NSDictionaryAdditions.h */,
+				E451D73D179AE01800A68C64 /* NSDictionaryAdditions.m */,
+				E451D740179AE01800A68C64 /* NSMutableArrayStack.h */,
+				E451D741179AE01800A68C64 /* NSMutableArrayStack.m */,
+				E451D742179AE01800A68C64 /* ObjectToDictionary.h */,
+				E451D743179AE01800A68C64 /* ObjectToDictionary.m */,
+				E451D744179AE01800A68C64 /* UIScrollViewAdditions.h */,
+				E451D745179AE01800A68C64 /* UIScrollViewAdditions.m */,
+				E451D746179AE01800A68C64 /* UIViewAdditions.h */,
+				E451D747179AE01800A68C64 /* UIViewAdditions.m */,
+				E451D751179AE98200A68C64 /* UIImageViewAdditions.h */,
+				E451D752179AE98200A68C64 /* UIImageViewAdditions.m */,
+			);
+			path = libAdditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +256,7 @@
 				E451D718179AD5AC00A68C64 /* Default-568h@2x.png in Resources */,
 				E451D71B179AD5AC00A68C64 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E451D71E179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard in Resources */,
+				E451D729179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +270,18 @@
 				E451D70E179AD5AC00A68C64 /* main.m in Sources */,
 				E451D712179AD5AC00A68C64 /* AppDelegate.m in Sources */,
 				E451D721179AD5AC00A68C64 /* ViewController.m in Sources */,
+				E451D732179ADFC500A68C64 /* MBDispatch.m in Sources */,
+				E451D733179ADFC500A68C64 /* MBGlobalDefaults.m in Sources */,
+				E451D734179ADFC500A68C64 /* MBProgressHUD.m in Sources */,
+				E451D748179AE01800A68C64 /* GradientButton.m in Sources */,
+				E451D749179AE01800A68C64 /* MBNSString.m in Sources */,
+				E451D74A179AE01800A68C64 /* NSArrayAdditions.m in Sources */,
+				E451D74B179AE01800A68C64 /* NSDictionaryAdditions.m in Sources */,
+				E451D74D179AE01800A68C64 /* NSMutableArrayStack.m in Sources */,
+				E451D74E179AE01800A68C64 /* ObjectToDictionary.m in Sources */,
+				E451D74F179AE01800A68C64 /* UIScrollViewAdditions.m in Sources */,
+				E451D750179AE01800A68C64 /* UIViewAdditions.m in Sources */,
+				E451D753179AE98200A68C64 /* UIImageViewAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +414,7 @@
 				E451D726179AD5AC00A68C64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

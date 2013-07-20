@@ -7,12 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "UIImageViewAdditions.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+@synthesize imageScrollView;
+@synthesize imageView;
 
 - (void)viewDidLoad
 {
@@ -24,6 +28,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)pressed:(id)sender
+{
+    [imageView fitToParent];
+    [imageView zoomByScale:15 animated:false];
+
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTicked:) userInfo:nil repeats:NO];
+}
+
+- (void)timerTicked:(NSTimer*)timer
+{
+    [imageView zoomByScale:1.0f / 15.0f animated:true];
 }
 
 @end
