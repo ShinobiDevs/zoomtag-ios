@@ -2,7 +2,7 @@
 //  UIViewAdditions.m
 //  Weather.IL
 //
-//  Created by Guy Shaviv on 28/3/09.
+//  Created by ShinobiDevs on 28/3/09.
 //  Copyright 2009 .. All rights reserved.
 //
 

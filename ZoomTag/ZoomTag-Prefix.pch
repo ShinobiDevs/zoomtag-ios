@@ -10,6 +10,9 @@
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
+    #import <FacebookSDK/FacebookSDK.h>
     #import <Foundation/Foundation.h>
     #import "UIViewAdditions.h"
+    #import "ObjectToDictionary.h"
+    #import "MBGlobalDefaults.h"
 #endif

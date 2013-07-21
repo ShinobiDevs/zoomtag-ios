@@ -1,6 +1,6 @@
 //
 //  MBGlobalDefaults.m
-//  Fiverr
+//  ShinobiDevs
 //
 //  Created by Miki Bergin on 3/5/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -9,10 +9,21 @@
 #import "MBGlobalDefaults.h"
 
 #define kDefaultServerUrl @"http://localhost:3000"
-//#define kDefaultServerUrl @"http://fiverr:staging@staging.fiverrstaging.com"
-//#define kDefaultServerUrl @"http://fiverr.com"
+//#define kDefaultServerUrl @"http://ShinobiDevs:staging@staging.ShinobiDevsstaging.com"
+//#define kDefaultServerUrl @"http://ShinobiDevs.com"
 
 #define kServerAuthenticationTokenKey @"serverAuthetincationTokenKey"
+
+#ifdef PRODUCTION
+    #define kFBAppID @""
+#else
+    #ifdef STAGING
+        #define kFBAppID @"515511105188973"
+    #else
+        #define kFBAppID @"515511105188973"
+    #endif
+#endif
+
 
 @implementation MBGlobalDefaults
 
@@ -59,5 +70,10 @@
     
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     [standardUserDefaults setObject:_serverAuthenticationToken forKey:kServerAuthenticationTokenKey];
+}
+
+- (NSString*) fbAppID
+{
+    return kFBAppID;
 }
 @end

@@ -2,7 +2,7 @@
 //  UIScrollViewAdditions.h
 //  houzz
 //
-//  Created by Guy Shaviv on 22/5/10.
+//  Created by ShinobiDevs on 22/5/10.
 //  Copyright 2010 Tiv Studio. All rights reserved.
 //
 

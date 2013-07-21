@@ -4,80 +4,57 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Manager View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="ManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="1368"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="Gk0-LR-0Yj">
+            <objects>
+                <viewController storyboardIdentifier="UserViewController" wantsFullScreenLayout="YES" id="cMl-Nz-ovW" customClass="UserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJ8-cX-ohJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-Ch-34X">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-dv-60P">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="9aq-sx-fwH"/>
-                                            <constraint firstAttribute="width" constant="290" id="RNq-jP-HGU"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="2Dq-dv-60P" firstAttribute="leading" secondItem="YJo-Ch-34X" secondAttribute="leading" constant="5" id="2y3-N6-P3f"/>
-                                    <constraint firstItem="2Dq-dv-60P" firstAttribute="top" secondItem="YJo-Ch-34X" secondAttribute="top" constant="-64" id="3jX-LT-j5U"/>
-                                    <constraint firstAttribute="bottom" secondItem="2Dq-dv-60P" secondAttribute="bottom" constant="64" id="V0I-L7-wBd"/>
-                                    <constraint firstAttribute="trailing" secondItem="2Dq-dv-60P" secondAttribute="trailing" constant="-5" id="hfB-wM-kdH"/>
-                                </constraints>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGM-eG-7D8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0R-8i-09T">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Facebook connect">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressed:" destination="2" eventType="touchUpInside" id="nyg-5K-6Uz"/>
+                                    <action selector="facebookConnectPressed:" destination="cMl-Nz-ovW" eventType="touchUpInside" id="xzP-lU-EZ9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="gGM-eG-7D8" secondAttribute="bottom" constant="29" id="5B6-GD-eWn"/>
-                            <constraint firstItem="YJo-Ch-34X" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="CYu-qW-ylo"/>
-                            <constraint firstItem="YJo-Ch-34X" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="15" id="E73-2Q-zno"/>
-                            <constraint firstItem="YJo-Ch-34X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="26" id="L1S-Qr-nGI"/>
-                            <constraint firstAttribute="bottom" secondItem="YJo-Ch-34X" secondAttribute="bottom" constant="122" id="PKQ-GW-t4s"/>
-                            <constraint firstItem="gGM-eG-7D8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="147" id="WO2-GC-jLn"/>
+                            <constraint firstItem="T0R-8i-09T" firstAttribute="leading" secondItem="OJ8-cX-ohJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6OR-rC-srt"/>
+                            <constraint firstItem="T0R-8i-09T" firstAttribute="top" secondItem="OJ8-cX-ohJ" secondAttribute="top" constant="232" id="VMe-ik-BwY"/>
+                            <constraint firstAttribute="trailing" secondItem="T0R-8i-09T" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="m7B-MR-ssa"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageScrollView" destination="YJo-Ch-34X" id="3mQ-UR-5qV"/>
-                        <outlet property="imageView" destination="2Dq-dv-60P" id="zFu-ul-A7I"/>
-                    </connections>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgp-2l-6MM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339" y="2028"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg" width="1280" height="1024"/>
-    </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressed:"/>
-                <relationship kind="outlet" name="imageScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

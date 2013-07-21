@@ -2,7 +2,7 @@
 //  NSDictionary+ObjectToDictionary.m
 //  AdditionsLib
 //
-//  Created by Guy Shaviv on 30/9/11.
+//  Created by ShinobiDevs on 30/9/11.
 //  Copyright (c) 2011 LitePoint Corp. All rights reserved.
 //
 

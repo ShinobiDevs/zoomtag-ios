@@ -2,7 +2,7 @@
 //  NSMutableArrayStack.m
 //  HotVOD
 //
-//  Created by Guy Shaviv on 12/30/09.
+//  Created by ShinobiDevs on 12/30/09.
 //  Copyright 2009 .. All rights reserved.
 //
 

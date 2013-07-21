@@ -2,7 +2,7 @@
 //  NSDictionaryAdditions.h
 //  houzz
 //
-//  Created by Guy Shaviv on 25/2/10.
+//  Created by ShinobiDevs on 25/2/10.
 //  Copyright 2010 . All rights reserved.
 //
 
