@@ -28,18 +28,18 @@
     return rng.location != NSNotFound;
 }
 
-- (NSString*) stringByConvertingUnicodeLineBreaks
-{
-    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
-    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@"\n"];
-}
-
-- (NSString*) stringByTrimmingUnicodeLineBreaks
-{
-    
-    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
-    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@" "];
-}
+//- (NSString*) stringByConvertingUnicodeLineBreaks
+//{
+//    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
+//    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@"\n"];
+//}
+//
+//- (NSString*) stringByTrimmingUnicodeLineBreaks
+//{
+//    
+//    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
+//    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@" "];
+//}
 
 - (NSString*) stringWithEncoding:(NSStringEncoding)iEncoding
 {

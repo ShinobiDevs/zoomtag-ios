@@ -51,6 +51,10 @@
 		E451D78E179EAF6600A68C64 /* ChallengeGuessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D78D179EAF6600A68C64 /* ChallengeGuessView.xib */; };
 		E451D791179EC95D00A68C64 /* GuessLetterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */; };
 		E451D793179EC97600A68C64 /* GuessLetterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */; };
+		E451D79C17A02E5200A68C64 /* DiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79517A02E5100A68C64 /* DiskCache.m */; };
+		E451D79D17A02E5200A68C64 /* MultiRecipientOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79717A02E5200A68C64 /* MultiRecipientOperation.m */; };
+		E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79917A02E5200A68C64 /* RequestBase.m */; };
+		E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79B17A02E5200A68C64 /* UrlDataRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +129,14 @@
 		E451D78F179EC95C00A68C64 /* GuessLetterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessLetterViewCell.h; sourceTree = "<group>"; };
 		E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessLetterViewCell.m; sourceTree = "<group>"; };
 		E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuessLetterViewCell.xib; sourceTree = "<group>"; };
+		E451D79417A02E5100A68C64 /* DiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskCache.h; sourceTree = "<group>"; };
+		E451D79517A02E5100A68C64 /* DiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskCache.m; sourceTree = "<group>"; };
+		E451D79617A02E5100A68C64 /* MultiRecipientOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiRecipientOperation.h; sourceTree = "<group>"; };
+		E451D79717A02E5200A68C64 /* MultiRecipientOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiRecipientOperation.m; sourceTree = "<group>"; };
+		E451D79817A02E5200A68C64 /* RequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestBase.h; sourceTree = "<group>"; };
+		E451D79917A02E5200A68C64 /* RequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestBase.m; sourceTree = "<group>"; };
+		E451D79A17A02E5200A68C64 /* UrlDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlDataRequest.h; sourceTree = "<group>"; };
+		E451D79B17A02E5200A68C64 /* UrlDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlDataRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +302,14 @@
 		E451D763179C14EC00A68C64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E451D79417A02E5100A68C64 /* DiskCache.h */,
+				E451D79517A02E5100A68C64 /* DiskCache.m */,
+				E451D79617A02E5100A68C64 /* MultiRecipientOperation.h */,
+				E451D79717A02E5200A68C64 /* MultiRecipientOperation.m */,
+				E451D79817A02E5200A68C64 /* RequestBase.h */,
+				E451D79917A02E5200A68C64 /* RequestBase.m */,
+				E451D79A17A02E5200A68C64 /* UrlDataRequest.h */,
+				E451D79B17A02E5200A68C64 /* UrlDataRequest.m */,
 				E451D764179C14ED00A68C64 /* UserSession.h */,
 				E451D765179C14ED00A68C64 /* UserSession.m */,
 			);
@@ -400,6 +420,10 @@
 				E451D789179D540E00A68C64 /* Challenge.m in Sources */,
 				E451D78C179EAF0F00A68C64 /* ChallengeGuessView.m in Sources */,
 				E451D791179EC95D00A68C64 /* GuessLetterViewCell.m in Sources */,
+				E451D79C17A02E5200A68C64 /* DiskCache.m in Sources */,
+				E451D79D17A02E5200A68C64 /* MultiRecipientOperation.m in Sources */,
+				E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */,
+				E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

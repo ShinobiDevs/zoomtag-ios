@@ -15,8 +15,8 @@
 + (NSString*) nilToEmpty:(NSString*)inputString;
 
 - (BOOL) containsString:(NSString *) string;
-- (NSString*) stringByConvertingUnicodeLineBreaks;
-- (NSString*) stringByTrimmingUnicodeLineBreaks;
+//- (NSString*) stringByConvertingUnicodeLineBreaks;
+//- (NSString*) stringByTrimmingUnicodeLineBreaks;
 - (NSString*) stringWithEncoding:(NSStringEncoding)iEncoding;
 - (NSString*) shuffle;
 @end
