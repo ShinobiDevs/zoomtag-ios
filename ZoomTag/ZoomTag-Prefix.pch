@@ -13,6 +13,14 @@
     #import <FacebookSDK/FacebookSDK.h>
     #import <Foundation/Foundation.h>
     #import "UIViewAdditions.h"
+    #import "UIImageViewAdditions.h"
     #import "ObjectToDictionary.h"
     #import "MBGlobalDefaults.h"
+    #import "MBNSString.h"
+#endif
+
+#if defined(DEBUG) || defined(ADHOC)
+#define NSDLog(a...) NSLog(a)
+#else
+#define NSDLog(a...)
 #endif

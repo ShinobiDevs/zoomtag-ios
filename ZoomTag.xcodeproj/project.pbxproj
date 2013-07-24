@@ -45,6 +45,12 @@
 		E451D774179C3AC400A68C64 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E451D773179C3AC400A68C64 /* Security.framework */; };
 		E451D77F179C45C200A68C64 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D77C179C45C100A68C64 /* DashboardViewController.m */; };
 		E451D780179C45C200A68C64 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D77E179C45C200A68C64 /* GameViewController.m */; };
+		E451D784179D536D00A68C64 /* ChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D782179D536C00A68C64 /* ChallengeViewController.m */; };
+		E451D789179D540E00A68C64 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D788179D540E00A68C64 /* Challenge.m */; };
+		E451D78C179EAF0F00A68C64 /* ChallengeGuessView.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D78B179EAF0F00A68C64 /* ChallengeGuessView.m */; };
+		E451D78E179EAF6600A68C64 /* ChallengeGuessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D78D179EAF6600A68C64 /* ChallengeGuessView.xib */; };
+		E451D791179EC95D00A68C64 /* GuessLetterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */; };
+		E451D793179EC97600A68C64 /* GuessLetterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +115,16 @@
 		E451D77C179C45C100A68C64 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardViewController.m; path = "View Controllers/DashboardViewController.m"; sourceTree = "<group>"; };
 		E451D77D179C45C200A68C64 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = "View Controllers/GameViewController.h"; sourceTree = "<group>"; };
 		E451D77E179C45C200A68C64 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = "View Controllers/GameViewController.m"; sourceTree = "<group>"; };
+		E451D781179D536C00A68C64 /* ChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChallengeViewController.h; path = "View Controllers/ChallengeViewController.h"; sourceTree = "<group>"; };
+		E451D782179D536C00A68C64 /* ChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChallengeViewController.m; path = "View Controllers/ChallengeViewController.m"; sourceTree = "<group>"; };
+		E451D787179D540E00A68C64 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Challenge.h; path = Models/Challenge.h; sourceTree = "<group>"; };
+		E451D788179D540E00A68C64 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Challenge.m; path = Models/Challenge.m; sourceTree = "<group>"; };
+		E451D78A179EAF0F00A68C64 /* ChallengeGuessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeGuessView.h; sourceTree = "<group>"; };
+		E451D78B179EAF0F00A68C64 /* ChallengeGuessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeGuessView.m; sourceTree = "<group>"; };
+		E451D78D179EAF6600A68C64 /* ChallengeGuessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeGuessView.xib; sourceTree = "<group>"; };
+		E451D78F179EC95C00A68C64 /* GuessLetterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessLetterViewCell.h; sourceTree = "<group>"; };
+		E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessLetterViewCell.m; sourceTree = "<group>"; };
+		E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuessLetterViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +151,7 @@
 		E451D6F5179AD5AC00A68C64 = {
 			isa = PBXGroup;
 			children = (
+				E451D786179D53E100A68C64 /* Models */,
 				E451D763179C14EC00A68C64 /* Controllers */,
 				E451D75D179C0BE800A68C64 /* Views */,
 				E451D727179AD61400A68C64 /* View Controllers */,
@@ -208,6 +225,8 @@
 				E451D757179C0AD400A68C64 /* UserViewController.m */,
 				E451D758179C0AD400A68C64 /* ManagerViewController.h */,
 				E451D759179C0AD400A68C64 /* ManagerViewController.m */,
+				E451D781179D536C00A68C64 /* ChallengeViewController.h */,
+				E451D782179D536C00A68C64 /* ChallengeViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +277,12 @@
 				E451D75E179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.h */,
 				E451D75F179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m */,
 				E451D760179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib */,
+				E451D78A179EAF0F00A68C64 /* ChallengeGuessView.h */,
+				E451D78B179EAF0F00A68C64 /* ChallengeGuessView.m */,
+				E451D78D179EAF6600A68C64 /* ChallengeGuessView.xib */,
+				E451D78F179EC95C00A68C64 /* GuessLetterViewCell.h */,
+				E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */,
+				E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +294,15 @@
 				E451D765179C14ED00A68C64 /* UserSession.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E451D786179D53E100A68C64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E451D787179D540E00A68C64 /* Challenge.h */,
+				E451D788179D540E00A68C64 /* Challenge.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +364,8 @@
 				E451D71E179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard in Resources */,
 				E451D729179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg in Resources */,
 				E451D762179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib in Resources */,
+				E451D78E179EAF6600A68C64 /* ChallengeGuessView.xib in Resources */,
+				E451D793179EC97600A68C64 /* GuessLetterViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +396,10 @@
 				E451D766179C14ED00A68C64 /* UserSession.m in Sources */,
 				E451D77F179C45C200A68C64 /* DashboardViewController.m in Sources */,
 				E451D780179C45C200A68C64 /* GameViewController.m in Sources */,
+				E451D784179D536D00A68C64 /* ChallengeViewController.m in Sources */,
+				E451D789179D540E00A68C64 /* Challenge.m in Sources */,
+				E451D78C179EAF0F00A68C64 /* ChallengeGuessView.m in Sources */,
+				E451D791179EC95D00A68C64 /* GuessLetterViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

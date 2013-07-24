@@ -18,4 +18,5 @@
 - (NSString*) stringByConvertingUnicodeLineBreaks;
 - (NSString*) stringByTrimmingUnicodeLineBreaks;
 - (NSString*) stringWithEncoding:(NSStringEncoding)iEncoding;
+- (NSString*) shuffle;
 @end
