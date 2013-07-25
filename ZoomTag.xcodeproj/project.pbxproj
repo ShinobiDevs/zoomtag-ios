@@ -55,6 +55,7 @@
 		E451D79D17A02E5200A68C64 /* MultiRecipientOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79717A02E5200A68C64 /* MultiRecipientOperation.m */; };
 		E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79917A02E5200A68C64 /* RequestBase.m */; };
 		E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79B17A02E5200A68C64 /* UrlDataRequest.m */; };
+		E451D7A217A03E3900A68C64 /* QueuedOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,8 @@
 		E451D79917A02E5200A68C64 /* RequestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestBase.m; sourceTree = "<group>"; };
 		E451D79A17A02E5200A68C64 /* UrlDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlDataRequest.h; sourceTree = "<group>"; };
 		E451D79B17A02E5200A68C64 /* UrlDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlDataRequest.m; sourceTree = "<group>"; };
+		E451D7A017A03E3900A68C64 /* QueuedOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueuedOperationManager.h; sourceTree = "<group>"; };
+		E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueuedOperationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,8 @@
 		E451D763179C14EC00A68C64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E451D7A017A03E3900A68C64 /* QueuedOperationManager.h */,
+				E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */,
 				E451D79417A02E5100A68C64 /* DiskCache.h */,
 				E451D79517A02E5100A68C64 /* DiskCache.m */,
 				E451D79617A02E5100A68C64 /* MultiRecipientOperation.h */,
@@ -424,6 +429,7 @@
 				E451D79D17A02E5200A68C64 /* MultiRecipientOperation.m in Sources */,
 				E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */,
 				E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */,
+				E451D7A217A03E3900A68C64 /* QueuedOperationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

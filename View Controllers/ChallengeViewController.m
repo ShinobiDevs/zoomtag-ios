@@ -9,6 +9,11 @@
 #import "ChallengeViewController.h"
 #import "Challenge.h"
 
+typedef enum
+{
+    kMainImage
+} urlRequestID;
+
 @interface ChallengeViewController ()
 
 @end
@@ -50,16 +55,8 @@
  - (void) refreshWithChallenge:(Challenge*)i_challenge
 {
     self.challenge = i_challenge;
-    self.challengeImageView.image = self.challenge.image;
-    [self.challengeImageView fitToParent];
     
-    // Zoom image to desired start location
-    [self.challengeImageView zoomByScale:zoomInScale animated:FALSE];
-    
-    challengeMode = ChallengeModeNotStarted;
-
-    [self resetCountdownWithSeconds:10];
-    challengeTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(startChallengeTimerTick) userInfo:nil repeats: YES];
+    [[QueuedOperationManager sharedInstance] requestDataForUrlString:self.challenge.imageUrlString CustomData:[NSNumber numberWithInt:kMainImage] Delegate:self];
 }
 
 - (IBAction)startNowButtonPressed:(id)sender
@@ -77,6 +74,42 @@
 - (void) guessUnsuccessful
 {
     
+}
+
+#pragma mark - QueuedOperationManagerDelegate
+
+- (void)dataFinishedLoading:(NSData*)urlData CustomData:(id)customData
+{
+    if (![customData isKindOfClass:[NSNumber class]])
+    {
+        return;
+    }
+    
+    UIImage* urlImage = [UIImage imageWithData:urlData];
+    
+    // perform the data set on the main thread
+    [MBDispatch MBDispatchASyncTo:dispatch_get_main_queue() DispatchBlock:
+     ^{
+         switch ([(NSNumber*)customData longValue])
+         {
+             case kMainImage:
+                 self.challengeImageView.image = urlImage;
+                 [self.challengeImageView fitToParent];
+                 
+                 // Zoom image to desired start location
+                 [self.challengeImageView zoomByScale:zoomInScale animated:FALSE];
+                 
+                 challengeMode = ChallengeModeNotStarted;
+                 
+                 [self resetCountdownWithSeconds:10];
+                 challengeTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(startChallengeTimerTick) userInfo:nil repeats: YES];
+                 break;
+                 
+             default:
+                 // MIKI - throw exception
+                 break;
+         }
+     }];
 }
 
 #pragma mark - Private methods

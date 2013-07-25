@@ -17,6 +17,7 @@
     #import "ObjectToDictionary.h"
     #import "MBGlobalDefaults.h"
     #import "MBNSString.h"
+    #import "MBDispatch.h"
 #endif
 
 #if defined(DEBUG) || defined(ADHOC)

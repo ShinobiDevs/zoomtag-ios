@@ -17,7 +17,7 @@ typedef enum
 
 @interface Challenge : NSObject
 
-@property (nonatomic, copy) UIImage* image;
+@property (nonatomic, copy) NSString* imageUrlString;
 @property (nonatomic, copy) NSString* easyTag;
 @property (nonatomic, copy) NSString* mediumTag;
 @property (nonatomic, copy) NSString* hardTag;

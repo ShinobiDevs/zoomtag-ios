@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ChallengeGuessView.h"
+#import "QueuedOperationManager.h"
 
 @class Challenge;
 
@@ -18,7 +19,7 @@ typedef enum
     ChallengeModeEnded,
 } ChallengeModes;
 
-@interface ChallengeViewController : UIViewController <ChallengeGuessViewDelegate>
+@interface ChallengeViewController : UIViewController <ChallengeGuessViewDelegate, QueuedOperationManagerDelegate>
 {
     ChallengeModes challengeMode;
     
