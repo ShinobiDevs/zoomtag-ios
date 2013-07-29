@@ -48,7 +48,7 @@
 {
     if (animated)
     {
-        [UIView animateWithDuration:5.0f
+        [UIView animateWithDuration:0.3f
                               delay:0
                             options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^
@@ -66,7 +66,7 @@
         [self setWidth:(self.width * scale)];
         [self setHeight:(self.height * scale)];
     }
-    
+
     [self setToCenter];
 }
 @end

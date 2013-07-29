@@ -28,21 +28,38 @@
     return rng.location != NSNotFound;
 }
 
-- (NSString*) stringByConvertingUnicodeLineBreaks
-{
-    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
-    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@"\n"];
-}
-
-- (NSString*) stringByTrimmingUnicodeLineBreaks
-{
-    
-    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
-    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@" "];
-}
+//- (NSString*) stringByConvertingUnicodeLineBreaks
+//{
+//    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
+//    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@"\n"];
+//}
+//
+//- (NSString*) stringByTrimmingUnicodeLineBreaks
+//{
+//    
+//    NSString* ret = [self stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000d] withString:@""];
+//    return [ret stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%C", 0x000a] withString:@" "];
+//}
 
 - (NSString*) stringWithEncoding:(NSStringEncoding)iEncoding
 {
     return [[NSString alloc] initWithData:[self dataUsingEncoding:iEncoding allowLossyConversion:YES] encoding:iEncoding];
+}
+
+- (NSString*) shuffle
+{
+    NSMutableString *randomizedText = [NSMutableString stringWithString:self];
+    
+    NSString *buffer;
+    for (NSInteger i = randomizedText.length - 1, j; i >= 0; i--)
+    {
+        j = arc4random() % (i + 1);
+        
+        buffer = [randomizedText substringWithRange:NSMakeRange(i, 1)];
+        [randomizedText replaceCharactersInRange:NSMakeRange(i, 1) withString:[randomizedText substringWithRange:NSMakeRange(j, 1)]];
+        [randomizedText replaceCharactersInRange:NSMakeRange(j, 1) withString:buffer];
+    }
+    
+    return randomizedText;
 }
 @end
