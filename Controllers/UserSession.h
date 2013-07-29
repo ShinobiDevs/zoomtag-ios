@@ -83,4 +83,5 @@ typedef id<UserSessionOperationsDelegate> ID_CONFIRMS_USERSESSION_OPERATIONS_DEL
 
 //- (BOOL) needToUpdateRegistration;
 - (void) persistSessionToDisk;
+- (void) connectWithFacebook;
 @end

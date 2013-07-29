@@ -12,6 +12,6 @@
 
 @interface ManagerViewController : UIViewController
 
-@property (weak, nonatomic) UserViewController *userViewController;
+@property (strong, nonatomic) UserViewController *userViewController;
 
 @end

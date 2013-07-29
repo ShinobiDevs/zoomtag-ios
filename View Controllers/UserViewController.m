@@ -46,18 +46,22 @@
     // this button's job is to flip-flop the session from open to closed
     UserSession* userSession = [UserSession sharedInstance];
 
+    [userSession.fbSession closeAndClearTokenInformation];
+    
     if (userSession.fbSession.state != FBSessionStateCreated)
     {
         // Create a new, logged out session.
-        userSession.fbSession = [[FBSession alloc] init];
+        userSession.fbSession = [[FBSession alloc] initWithAppID:[MBGlobalDefaults sharedInstance].fbAppID permissions:nil urlSchemeSuffix:nil
+                                       tokenCacheStrategy:[[FBSessionTokenCachingStrategy alloc] initWithUserDefaultTokenInformationKeyName:@"FBAccessTokenInformationKey"]];
     }
-    
+//        userSession.fbSession = [[FBSession alloc] init];
     // if the session isn't open, let's open it now and present the login UX to the user
+
     [userSession.fbSession openWithCompletionHandler:^(FBSession *session,
                                                      FBSessionState status,
                                                      NSError *error)
     {
-        [self.delegate loginSuccessful];
+        [[UserSession sharedInstance] connectWithFacebook];
     }];
 }
 @end

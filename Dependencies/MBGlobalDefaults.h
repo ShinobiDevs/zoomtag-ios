@@ -15,6 +15,7 @@
 @property (nonatomic, copy, readonly) NSURL* serverUrl;
 @property (nonatomic, copy) NSString* serverAuthenticationToken;
 @property (nonatomic, copy, readonly) NSString* fbAppID;
+@property (nonatomic, copy, readonly) NSString* rootServerUrl;
 
 + (MBGlobalDefaults*) sharedInstance;
 - (MBGlobalDefaults*) init; 

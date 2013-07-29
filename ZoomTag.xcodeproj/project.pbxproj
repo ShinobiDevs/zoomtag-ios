@@ -456,10 +456,14 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZoomTag/ZoomTag-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEVELOPMENT=1",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)/../../../Documents/FacebookSDK/Headers\"",
@@ -475,7 +479,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZoomTag/ZoomTag-Prefix.pch";
