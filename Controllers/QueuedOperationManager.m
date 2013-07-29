@@ -52,6 +52,17 @@
     return urlRequest;
 }
 
+- (RequestBase*) requestGamesForPage:(NSNumber*)iPageNum CustomData:(id)customData RequestDelegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate
+{
+    GameRequest * gameRequest = [[GameRequest alloc] initWithPageNum:iPageNum Delegate:delegate];
+    
+    gameRequest.customData = customData;
+    
+    [gameRequest setQueuePriority:NSOperationQueuePriorityHigh];
+    [self addOperation:gameRequest];
+    
+    return gameRequest;
+}
 
 - (MultiRecipientOperation*) findOperationInQueue:(MultiRecipientOperation*)operation
 {

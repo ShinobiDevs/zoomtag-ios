@@ -56,6 +56,9 @@
 		E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79917A02E5200A68C64 /* RequestBase.m */; };
 		E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D79B17A02E5200A68C64 /* UrlDataRequest.m */; };
 		E451D7A217A03E3900A68C64 /* QueuedOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */; };
+		E451D7A517A446FD00A68C64 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A417A446FD00A68C64 /* Game.m */; };
+		E451D7A817A4548F00A68C64 /* GameCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A717A4548F00A68C64 /* GameCollection.m */; };
+		E451D7AE17A5476500A68C64 /* GameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7AD17A5476500A68C64 /* GameRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +143,12 @@
 		E451D79B17A02E5200A68C64 /* UrlDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlDataRequest.m; sourceTree = "<group>"; };
 		E451D7A017A03E3900A68C64 /* QueuedOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueuedOperationManager.h; sourceTree = "<group>"; };
 		E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueuedOperationManager.m; sourceTree = "<group>"; };
+		E451D7A317A446FD00A68C64 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Models/Game.h; sourceTree = "<group>"; };
+		E451D7A417A446FD00A68C64 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Models/Game.m; sourceTree = "<group>"; };
+		E451D7A617A4548E00A68C64 /* GameCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCollection.h; path = Models/GameCollection.h; sourceTree = "<group>"; };
+		E451D7A717A4548F00A68C64 /* GameCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollection.m; path = Models/GameCollection.m; sourceTree = "<group>"; };
+		E451D7AC17A5476500A68C64 /* GameRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRequest.h; sourceTree = "<group>"; };
+		E451D7AD17A5476500A68C64 /* GameRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +314,8 @@
 		E451D763179C14EC00A68C64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E451D7AC17A5476500A68C64 /* GameRequest.h */,
+				E451D7AD17A5476500A68C64 /* GameRequest.m */,
 				E451D7A017A03E3900A68C64 /* QueuedOperationManager.h */,
 				E451D7A117A03E3900A68C64 /* QueuedOperationManager.m */,
 				E451D79417A02E5100A68C64 /* DiskCache.h */,
@@ -324,8 +335,12 @@
 		E451D786179D53E100A68C64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E451D7A617A4548E00A68C64 /* GameCollection.h */,
+				E451D7A717A4548F00A68C64 /* GameCollection.m */,
 				E451D787179D540E00A68C64 /* Challenge.h */,
 				E451D788179D540E00A68C64 /* Challenge.m */,
+				E451D7A317A446FD00A68C64 /* Game.h */,
+				E451D7A417A446FD00A68C64 /* Game.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -430,6 +445,9 @@
 				E451D79E17A02E5200A68C64 /* RequestBase.m in Sources */,
 				E451D79F17A02E5200A68C64 /* UrlDataRequest.m in Sources */,
 				E451D7A217A03E3900A68C64 /* QueuedOperationManager.m in Sources */,
+				E451D7A517A446FD00A68C64 /* Game.m in Sources */,
+				E451D7A817A4548F00A68C64 /* GameCollection.m in Sources */,
+				E451D7AE17A5476500A68C64 /* GameRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

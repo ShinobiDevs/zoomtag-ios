@@ -23,4 +23,5 @@ typedef enum
 @property (nonatomic, copy) NSString* hardTag;
 @property (nonatomic) HintTypes hint;
 
+- (Challenge*)initWithDictionaryJsonValues:(NSDictionary*)dictionary;
 @end
