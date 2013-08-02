@@ -16,12 +16,13 @@
 
 #ifdef PRODUCTION
     #define kFBAppID @""
-#else
-    #ifdef STAGING
-        #define kFBAppID @"515511105188973"
-    #else
-        #define kFBAppID @"515511105188973"
-    #endif
+#endif
+#ifdef STAGING
+    #define kFBAppID @"515511105188973"
+#endif
+#ifdef DEVELOPMENT
+    #define kFBAppID @"515511105188973"
+    #define kRootServerUrl @"http://zoomtag.heroku.com"
 #endif
 
 
@@ -75,5 +76,10 @@
 - (NSString*) fbAppID
 {
     return kFBAppID;
+}
+
+- (NSString*) rootServerUrl
+{
+    return kRootServerUrl;
 }
 @end

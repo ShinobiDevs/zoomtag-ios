@@ -101,7 +101,7 @@
                 }
                 else
                 {
-                    // call our api to log in
+                    
                 }
             }
 
@@ -148,9 +148,9 @@
 //    
 //    [request setHTTPMethod:@"POST"];
 //    [request setHTTPBody:postData];
-//    
+//
 //    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-//    
+//
 //    FiverrLoginStatus eLoginStatus;
 //    
 //    if (response)
@@ -514,6 +514,37 @@
     NSMutableDictionary* dict = [NSMutableDictionary new];
     
     return dict;
+}
+
+- (void) connectWithFacebook
+{
+    NSHTTPURLResponse   * response;
+    NSError             * error;
+    NSMutableURLRequest * request;
+    
+    NSString* serverUrl = [MBGlobalDefaults sharedInstance].rootServerUrl;
+    NSString* authUrl = [NSString stringWithFormat:@"%@%@", serverUrl, @"/players/sign_in"];
+    request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:authUrl] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
+    
+    NSString *post = [NSString stringWithFormat:@"access_token=%@", self.fbSession.accessTokenData.accessToken];
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:postData];
+    
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (response)
+    {
+        switch (response.statusCode)
+        {
+            case 200:
+            {
+                _userStatus = UserStatusLoggedIn;
+                break;
+            }
+        }
+    }
 }
 @end
 
