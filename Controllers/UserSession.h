@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ObjectToDictionary.h"
+#import "Player.h"
 
 @class KeychainItemWrapper, ASIHTTPRequest;
 
@@ -69,6 +70,8 @@ typedef id<UserSessionOperationsDelegate> ID_CONFIRMS_USERSESSION_OPERATIONS_DEL
 //@property (strong, nonatomic, readonly) Facebook* facebookInstance;
 @property (strong, nonatomic) NSString* deviceReferenceToken;
 @property (strong, nonatomic) ID_CONFIRMS_USERSESSION_OPERATIONS_DELEGATE delegate;
+@property (strong, nonatomic) Player* player;
+@property (copy, nonatomic) NSString* authToken;
 
 + (UserSession*) sharedInstance;
 

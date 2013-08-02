@@ -8,11 +8,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Controllers/UserSession.m"
-         timestampString = "396369004.462793"
+         timestampString = "397146728.312181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "539"
-         endingLineNumber = "539"
+         startingLineNumber = "542"
+         endingLineNumber = "542"
+         landmarkName = "-connectWithFacebook"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Controllers/UserSession.m"
+         timestampString = "397146721.307574"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "559"
+         endingLineNumber = "559"
          landmarkName = "-connectWithFacebook"
          landmarkType = "5">
       </FileBreakpoint>

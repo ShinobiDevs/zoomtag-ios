@@ -35,6 +35,8 @@
 //@synthesize facebookInstance = _facebookInstance;
 @synthesize deviceReferenceToken = _deviceReferenceToken;
 @synthesize delegate = _delegate;
+@synthesize player;
+@synthesize authToken;
 
 + (UserSession*) sharedInstance
 {
@@ -532,7 +534,7 @@
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:postData];
     
-    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (response)
     {
@@ -541,6 +543,22 @@
             case 200:
             {
                 _userStatus = UserStatusLoggedIn;
+                if(result != nil)
+                {
+                    NSDictionary *playerDictionary = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
+                    
+                    if (!playerDictionary)
+                    {
+                        NSString *responseString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+                        
+                        NSDLog(@"error occurred in the json parsing of a player, this is the invalid json string:%@", responseString);
+                    }
+                    else
+                    {
+                        self.player = [[Player alloc] initWithDictionaryJsonValues:playerDictionary];
+                        self.authToken = [playerDictionary objectForKey:@"authentication_token"];
+                    }
+                }
                 break;
             }
         }

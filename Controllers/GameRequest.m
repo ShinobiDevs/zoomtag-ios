@@ -3,6 +3,7 @@
 
 #import "GameRequest.h"
 #import "Game.h"
+#import "UserSession.h"
 
 #define kGameUrlString @"games.json" // ? auth_token = "fdsfsdgsdfds"
 
@@ -18,7 +19,7 @@
     {
         _pageNum = iPageNum;
         
-        NSString* urlString = [NSString stringWithFormat:@"%@/%@?page=%@&auth_token=PsttkEtxUmLbVbyGskSr", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.pageNum];
+        NSString* urlString = [NSString stringWithFormat:@"%@/%@?page=%@&auth_token=%@", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.pageNum, [UserSession sharedInstance].authToken];
         
         NSDLog(@"game request for url:%@", urlString);
         

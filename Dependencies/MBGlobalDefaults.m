@@ -22,7 +22,7 @@
 #endif
 #ifdef DEVELOPMENT
     #define kFBAppID @"515511105188973"
-    #define kRootServerUrl @"http://zoomtag.heroku.com"
+    #define kRootServerUrl @"http://localhost:3000"
 #endif
 
 
