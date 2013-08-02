@@ -8,27 +8,27 @@
 
 #import "Game.h"
 
-NSString * const kGAME_COMPLEX_OBJECT_KEY =   @"game_with_info";
-
 NSString * const GAME_KEY_ID =                      @"id";
 NSString * const GAME_KEY_CURRENT_TURN =            @"current_turn";
 NSString * const GAME_KEY_WAITING_TO_CHALLANGE =    @"waiting_to_challange";
+NSString * const GAME_KEY_PLAYER1 =                 @"player1";
+NSString * const GAME_KEY_PLAYER2 =                 @"player2";
 NSString * const GAME_KEY_NEXT_CHALLANGE =          @"next_challange";
 
 @implementation Game
 @synthesize id;
 @synthesize nexthCallenge;
 
-+ (NSArray*)parseGamesFromArray:(NSArray*)iGamessArray
++ (NSArray*)parseGamesFromArray:(NSArray*)iGamesArray
 {    
     NSMutableArray *arrayRetPages = [[NSMutableArray alloc] init];
     
-    if (![iGamessArray isKindOfClass:[NSArray class]])
+    if (![iGamesArray isKindOfClass:[NSArray class]])
     {
-        iGamessArray = [NSArray arrayWithObject:iGamessArray];
+        iGamesArray = [NSArray arrayWithObject:iGamesArray];
     }
     
-    for (NSDictionary* dictionary in iGamessArray)
+    for (NSDictionary* dictionary in iGamesArray)
     {
         Game* game = [[Game alloc] initWithDictionaryJsonValues:dictionary];
         if (game)
@@ -55,11 +55,14 @@ NSString * const GAME_KEY_NEXT_CHALLANGE =          @"next_challange";
         // parse the gig data
         if(dict)
         {
-            self.id = [[dict objectForKey:GAME_KEY_ID] intValue];
+            self.id = [dict objectForKey:GAME_KEY_ID];
             self.current_turn = [[dict objectForKey:GAME_KEY_CURRENT_TURN] intValue];
             self.waiting_to_challenge = [[dict objectForKey:GAME_KEY_WAITING_TO_CHALLANGE] boolValue];
             
             self.nexthCallenge = [[Challenge alloc] initWithDictionaryJsonValues:[dict objectForKey:GAME_KEY_NEXT_CHALLANGE]];
+            
+            self.player1 = [[Player alloc] initWithDictionaryJsonValues:[dict objectForKey:GAME_KEY_PLAYER1]];
+            self.player2 = [[Player alloc] initWithDictionaryJsonValues:[dict objectForKey:GAME_KEY_PLAYER2]];
         }
         
         /*

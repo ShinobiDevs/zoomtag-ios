@@ -36,9 +36,9 @@
         NSURL *localCopy = [self.url copy];
         if (!data) 
         {
-            // NSDLog(@"Starting download %@",url);
+            NSDLog(@"Starting download %@",url);
             data = [NSData dataWithContentsOfURL:url];
-            // NSDLog(@"Done %@",url);
+            NSDLog(@"Done %@",url);
             
             if (data) 
             {

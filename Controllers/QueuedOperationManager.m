@@ -64,6 +64,18 @@
     return gameRequest;
 }
 
+- (RequestBase*) requestFBFriendsForCustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate
+{
+    FBFriendsRequest * request = [[FBFriendsRequest alloc] initWithDelegate:delegate];
+    
+    request.customData = customData;
+    
+    [request setQueuePriority:NSOperationQueuePriorityHigh];
+    [self addOperation:request];
+    
+    return request;
+}
+
 - (MultiRecipientOperation*) findOperationInQueue:(MultiRecipientOperation*)operation
 {
     // see if there is already a request in the queue for this url

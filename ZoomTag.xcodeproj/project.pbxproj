@@ -33,8 +33,6 @@
 		E451D75A179C0AD400A68C64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D755179C0AD400A68C64 /* AppDelegate.m */; };
 		E451D75B179C0AD400A68C64 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D757179C0AD400A68C64 /* UserViewController.m */; };
 		E451D75C179C0AD400A68C64 /* ManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D759179C0AD400A68C64 /* ManagerViewController.m */; };
-		E451D761179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D75F179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m */; };
-		E451D762179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D760179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib */; };
 		E451D766179C14ED00A68C64 /* UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D765179C14ED00A68C64 /* UserSession.m */; };
 		E451D768179C16E100A68C64 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E451D767179C16E000A68C64 /* libxml2.dylib */; };
 		E451D76A179C1DDC00A68C64 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E451D769179C1DDC00A68C64 /* FacebookSDK.framework */; };
@@ -59,6 +57,14 @@
 		E451D7A517A446FD00A68C64 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A417A446FD00A68C64 /* Game.m */; };
 		E451D7A817A4548F00A68C64 /* GameCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7A717A4548F00A68C64 /* GameCollection.m */; };
 		E451D7AE17A5476500A68C64 /* GameRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7AD17A5476500A68C64 /* GameRequest.m */; };
+		E451D7B017A6A4B100A68C64 /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D7AF17A6A4B100A68C64 /* GameView.xib */; };
+		E451D7B317A6A4C400A68C64 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7B217A6A4C400A68C64 /* GameView.m */; };
+		E451D7B617A6AE8800A68C64 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7B517A6AE8800A68C64 /* Player.m */; };
+		E451D7B917A7D8B700A68C64 /* FBFriendsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7B817A7D8B600A68C64 /* FBFriendsRequest.m */; };
+		E451D7BC17A7E1C300A68C64 /* FBFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7BB17A7E1C200A68C64 /* FBFriendsView.m */; };
+		E451D7BE17A7E1D800A68C64 /* FBFriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D7BD17A7E1D700A68C64 /* FBFriendsView.xib */; };
+		E451D7C017A7E84500A68C64 /* FBFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E451D7BF17A7E84400A68C64 /* FBFriendsTableViewCell.xib */; };
+		E451D7C317A7E87600A68C64 /* FBFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E451D7C217A7E87400A68C64 /* FBFriendsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,9 +113,6 @@
 		E451D757179C0AD400A68C64 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = "View Controllers/UserViewController.m"; sourceTree = "<group>"; };
 		E451D758179C0AD400A68C64 /* ManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ManagerViewController.h; path = "View Controllers/ManagerViewController.h"; sourceTree = "<group>"; };
 		E451D759179C0AD400A68C64 /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ManagerViewController.m; path = "View Controllers/ManagerViewController.m"; sourceTree = "<group>"; };
-		E451D75E179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderWithTextFieldTableViewCell.h; sourceTree = "<group>"; };
-		E451D75F179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderWithTextFieldTableViewCell.m; sourceTree = "<group>"; };
-		E451D760179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderWithTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		E451D764179C14ED00A68C64 /* UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSession.h; sourceTree = "<group>"; };
 		E451D765179C14ED00A68C64 /* UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSession.m; sourceTree = "<group>"; };
 		E451D767179C16E000A68C64 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -149,6 +152,19 @@
 		E451D7A717A4548F00A68C64 /* GameCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollection.m; path = Models/GameCollection.m; sourceTree = "<group>"; };
 		E451D7AC17A5476500A68C64 /* GameRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRequest.h; sourceTree = "<group>"; };
 		E451D7AD17A5476500A68C64 /* GameRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRequest.m; sourceTree = "<group>"; };
+		E451D7AF17A6A4B100A68C64 /* GameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameView.xib; sourceTree = "<group>"; };
+		E451D7B117A6A4C400A68C64 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		E451D7B217A6A4C400A68C64 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		E451D7B417A6AE8800A68C64 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Models/Player.h; sourceTree = "<group>"; };
+		E451D7B517A6AE8800A68C64 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Models/Player.m; sourceTree = "<group>"; };
+		E451D7B717A7D8B500A68C64 /* FBFriendsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsRequest.h; sourceTree = "<group>"; };
+		E451D7B817A7D8B600A68C64 /* FBFriendsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsRequest.m; sourceTree = "<group>"; };
+		E451D7BA17A7E1C200A68C64 /* FBFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsView.h; sourceTree = "<group>"; };
+		E451D7BB17A7E1C200A68C64 /* FBFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsView.m; sourceTree = "<group>"; };
+		E451D7BD17A7E1D700A68C64 /* FBFriendsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBFriendsView.xib; sourceTree = "<group>"; };
+		E451D7BF17A7E84400A68C64 /* FBFriendsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBFriendsTableViewCell.xib; sourceTree = "<group>"; };
+		E451D7C117A7E87400A68C64 /* FBFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsTableViewCell.h; sourceTree = "<group>"; };
+		E451D7C217A7E87400A68C64 /* FBFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,14 +257,14 @@
 			children = (
 				E451D77B179C45C100A68C64 /* DashboardViewController.h */,
 				E451D77C179C45C100A68C64 /* DashboardViewController.m */,
-				E451D77D179C45C200A68C64 /* GameViewController.h */,
-				E451D77E179C45C200A68C64 /* GameViewController.m */,
 				E451D754179C0AD400A68C64 /* AppDelegate.h */,
 				E451D755179C0AD400A68C64 /* AppDelegate.m */,
 				E451D756179C0AD400A68C64 /* UserViewController.h */,
 				E451D757179C0AD400A68C64 /* UserViewController.m */,
 				E451D758179C0AD400A68C64 /* ManagerViewController.h */,
 				E451D759179C0AD400A68C64 /* ManagerViewController.m */,
+				E451D77D179C45C200A68C64 /* GameViewController.h */,
+				E451D77E179C45C200A68C64 /* GameViewController.m */,
 				E451D781179D536C00A68C64 /* ChallengeViewController.h */,
 				E451D782179D536C00A68C64 /* ChallengeViewController.m */,
 			);
@@ -298,15 +314,21 @@
 		E451D75D179C0BE800A68C64 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E451D75E179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.h */,
-				E451D75F179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m */,
-				E451D760179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib */,
 				E451D78A179EAF0F00A68C64 /* ChallengeGuessView.h */,
 				E451D78B179EAF0F00A68C64 /* ChallengeGuessView.m */,
 				E451D78D179EAF6600A68C64 /* ChallengeGuessView.xib */,
 				E451D78F179EC95C00A68C64 /* GuessLetterViewCell.h */,
 				E451D790179EC95C00A68C64 /* GuessLetterViewCell.m */,
 				E451D792179EC97600A68C64 /* GuessLetterViewCell.xib */,
+				E451D7B117A6A4C400A68C64 /* GameView.h */,
+				E451D7B217A6A4C400A68C64 /* GameView.m */,
+				E451D7AF17A6A4B100A68C64 /* GameView.xib */,
+				E451D7BA17A7E1C200A68C64 /* FBFriendsView.h */,
+				E451D7BB17A7E1C200A68C64 /* FBFriendsView.m */,
+				E451D7BD17A7E1D700A68C64 /* FBFriendsView.xib */,
+				E451D7C117A7E87400A68C64 /* FBFriendsTableViewCell.h */,
+				E451D7C217A7E87400A68C64 /* FBFriendsTableViewCell.m */,
+				E451D7BF17A7E84400A68C64 /* FBFriendsTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +350,8 @@
 				E451D79B17A02E5200A68C64 /* UrlDataRequest.m */,
 				E451D764179C14ED00A68C64 /* UserSession.h */,
 				E451D765179C14ED00A68C64 /* UserSession.m */,
+				E451D7B717A7D8B500A68C64 /* FBFriendsRequest.h */,
+				E451D7B817A7D8B600A68C64 /* FBFriendsRequest.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,6 +365,8 @@
 				E451D788179D540E00A68C64 /* Challenge.m */,
 				E451D7A317A446FD00A68C64 /* Game.h */,
 				E451D7A417A446FD00A68C64 /* Game.m */,
+				E451D7B417A6AE8800A68C64 /* Player.h */,
+				E451D7B517A6AE8800A68C64 /* Player.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -403,9 +429,11 @@
 				E451D71B179AD5AC00A68C64 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E451D71E179AD5AC00A68C64 /* MainStoryboard_iPad.storyboard in Resources */,
 				E451D729179AD69D00A68C64 /* ninja-turtles-in-the-shadow-wallpaper-1280x1024.jpg in Resources */,
-				E451D762179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.xib in Resources */,
 				E451D78E179EAF6600A68C64 /* ChallengeGuessView.xib in Resources */,
 				E451D793179EC97600A68C64 /* GuessLetterViewCell.xib in Resources */,
+				E451D7B017A6A4B100A68C64 /* GameView.xib in Resources */,
+				E451D7BE17A7E1D800A68C64 /* FBFriendsView.xib in Resources */,
+				E451D7C017A7E84500A68C64 /* FBFriendsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +460,6 @@
 				E451D75A179C0AD400A68C64 /* AppDelegate.m in Sources */,
 				E451D75B179C0AD400A68C64 /* UserViewController.m in Sources */,
 				E451D75C179C0AD400A68C64 /* ManagerViewController.m in Sources */,
-				E451D761179C0BE800A68C64 /* HeaderWithTextFieldTableViewCell.m in Sources */,
 				E451D766179C14ED00A68C64 /* UserSession.m in Sources */,
 				E451D77F179C45C200A68C64 /* DashboardViewController.m in Sources */,
 				E451D780179C45C200A68C64 /* GameViewController.m in Sources */,
@@ -448,6 +475,11 @@
 				E451D7A517A446FD00A68C64 /* Game.m in Sources */,
 				E451D7A817A4548F00A68C64 /* GameCollection.m in Sources */,
 				E451D7AE17A5476500A68C64 /* GameRequest.m in Sources */,
+				E451D7B317A6A4C400A68C64 /* GameView.m in Sources */,
+				E451D7B617A6AE8800A68C64 /* Player.m in Sources */,
+				E451D7B917A7D8B700A68C64 /* FBFriendsRequest.m in Sources */,
+				E451D7BC17A7E1C300A68C64 /* FBFriendsView.m in Sources */,
+				E451D7C317A7E87600A68C64 /* FBFriendsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

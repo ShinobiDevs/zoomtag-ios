@@ -18,7 +18,7 @@
     {
         _pageNum = iPageNum;
         
-        NSString* urlString = [NSString stringWithFormat:@"%@/%@?page=%@&auth_token=amzw9uDhYxyr999ciYyn", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.pageNum];
+        NSString* urlString = [NSString stringWithFormat:@"%@/%@?page=%@&auth_token=PsttkEtxUmLbVbyGskSr", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.pageNum];
         
         NSDLog(@"game request for url:%@", urlString);
         

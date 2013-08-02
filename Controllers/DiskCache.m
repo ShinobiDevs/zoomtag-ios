@@ -83,18 +83,35 @@ static DiskCache *sharedInstance;
 	
 }
 
-- (NSString*) cacheKey:(NSString*)urlString {
+- (NSString*) cacheKey:(NSString*)urlString
+{
     int len =  urlString.length;
     NSRange pathRange = [urlString rangeOfString:@"/" options:0 range:NSMakeRange(7,len-7)];
     NSRange queryRange = [urlString rangeOfString:@"?" options:0 range:NSMakeRange(7,len-7)];
-    if (queryRange.location == NSNotFound) {
+    if (queryRange.location == NSNotFound)
+    {
         pathRange.length = len - pathRange.location;
-    } else {
+    } else
+    {
         pathRange.length = queryRange.location - pathRange.location;
     }
     NSUInteger hash = [[urlString substringWithRange:pathRange] hash]; // this includes the part after the ? May not be needed
-    NSString *ext = [[urlString pathExtension] substringWithRange:NSMakeRange(0, 3)];
-    NSString *key= [NSString stringWithFormat:@"%lu.%@",(unsigned long)hash,ext];
+    NSString* pathExtension = [urlString pathExtension];
+    
+    NSString* key;
+    NSString* ext;
+    if (nil != pathExtension && ![@"" isEqual: pathExtension])
+    {
+        ext = [pathExtension substringWithRange:NSMakeRange(0, 3)];
+        key = [NSString stringWithFormat:@"%lu.%@",(unsigned long)hash,ext];
+
+    }
+    else
+    {
+        key = [NSString stringWithFormat:@"%lu",(unsigned long)hash];
+    }
+    
+    
     return key;
 }
 

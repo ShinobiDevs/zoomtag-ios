@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameCollection.h"
+#import "QueuedOperationManager.h"
+#import "FBFriendsView.h"
+#import "GameView.h"
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController <GameCollectionDelegate, QueuedOperationManagerDelegate, FBFriendsViewDelegate>
+{
+    UINib* gameViewNib;
+    UINib* fbFriendsViewNib;
+    
+    GameCollection* gameCollection;
+}
 
+@property (nonatomic, strong) NSDictionary* gameViewDict;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *gameScrollView;
+
+- (IBAction)showFBFriendsPressed:(id)sender;
 @end

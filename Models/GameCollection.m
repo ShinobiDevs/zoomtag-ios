@@ -33,8 +33,13 @@
 
 - (BOOL) addGame:(Game *)game
 {
-    [gameDictionary setObject:game forKey:game.id];
-    return true;
+    if (nil == [gameDictionary objectForKey:game.id])
+    {
+        [gameDictionary setObject:game forKey:game.id];
+        return YES;
+    }
+    
+    return NO;
 }
 
 - (BOOL) caching
@@ -61,7 +66,7 @@
 
 - (BOOL)moreGamesNeeded
 {
-    return NO;
+    return YES;
 }
 
 -(void) cacheGames:(BOOL)cachingFinished
@@ -110,7 +115,7 @@
 //    }
 //    
 //    return newDataAdded;
-    return nil;
+    return false;
 }
 
 
@@ -192,7 +197,7 @@
     [MBDispatch MBDispatchASyncTo:dispatch_get_main_queue() DispatchBlock:^
     {
         //NSDLog(@"dispatching retry after failure for categoryID:%d", [self.categoryID intValue]);
-        [self performSelector:@selector(retryLastGigRequest) withObject:nil afterDelay:kRetryTime];
+        [self performSelector:@selector(retryLastGameRequest) withObject:nil afterDelay:kRetryTime];
     }];
 }
 @end
