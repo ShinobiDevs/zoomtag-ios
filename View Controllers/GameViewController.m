@@ -117,10 +117,22 @@
 
 - (void) FBFriendSelected:(Player *)player
 {
-    
+    [[QueuedOperationManager sharedInstance] requestGameForOpponent:player CustomData:nil RequestDelegate:self];
 }
 
 - (void) FBFriendSelectCanacelled
+{
+    
+}
+
+#pragma mark - CreateGameRequestDelegate protocol methods
+
+- (void)createGameRequestFinished:(Game*)game
+{
+    int a = 1;
+}
+
+- (void)createGameRequestError
 {
     
 }

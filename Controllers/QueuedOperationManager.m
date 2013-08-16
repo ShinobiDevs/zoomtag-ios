@@ -64,6 +64,18 @@
     return gameRequest;
 }
 
+- (RequestBase*) requestGameForOpponent:(Player*)iOpponent CustomData:(id)customData RequestDelegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate
+{
+    CreateGameRequest * gameRequest = [[CreateGameRequest alloc] initWithOpponent:iOpponent Delegate:delegate];
+    
+    gameRequest.customData = customData;
+    
+    [gameRequest setQueuePriority:NSOperationQueuePriorityHigh];
+    [self addOperation:gameRequest];
+    
+    return gameRequest;
+}
+
 - (RequestBase*) requestFBFriendsForCustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate
 {
     FBFriendsRequest * request = [[FBFriendsRequest alloc] initWithDelegate:delegate];
