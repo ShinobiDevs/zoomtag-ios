@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserViewController.h"
+#import "GameViewController.h"
 
-@class UserViewController;
-
-@interface ManagerViewController : UIViewController
+@interface ManagerViewController : UIViewController <UserViewControllerDelegate>
 
 @property (strong, nonatomic) UserViewController *userViewController;
+@property (strong, nonatomic) GameViewController *gameViewController;
 
 @end

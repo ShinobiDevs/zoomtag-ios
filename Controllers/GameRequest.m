@@ -49,7 +49,7 @@
         [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
 
         
-        NSURLResponse *response = nil;
+        NSHTTPURLResponse *response = nil;
         NSError* error = nil;
         
         //Synchronous call
@@ -61,7 +61,7 @@
         
         [self doneProcessing];
         
-        if(result != nil)
+        if(response && response.statusCode == 200 && result != nil)
         {
             NSArray *arrayJsonPages = (NSArray*)[NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
             

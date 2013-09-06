@@ -13,8 +13,8 @@
 
 NSString * const USER_SESSION_KEY = @"user_session";
 
-NSString * const SESSION_KEY_PLAYER =     @"player";
-NSString * const SESSION_KEY_AUTH_TOKEN = @"auth_token";
+NSString * const SESSION_KEY_PLAYER =      @"player";
+NSString * const SESSION_KEY_AUTH_TOKEN =  @"auth_token";
 
 @implementation UserSession
 
@@ -24,7 +24,6 @@ NSString * const SESSION_KEY_AUTH_TOKEN = @"auth_token";
 //@synthesize request;
 @synthesize wrapper;
 @synthesize deviceToken;
-@synthesize userStatus = _userStatus;
 //@synthesize facebookInstance = _facebookInstance;
 @synthesize deviceReferenceToken = _deviceReferenceToken;
 @synthesize delegate = _delegate;
@@ -85,25 +84,6 @@ NSString * const SESSION_KEY_AUTH_TOKEN = @"auth_token";
 
             self.fbSession = [[FBSession alloc] initWithAppID:[MBGlobalDefaults sharedInstance].fbAppID permissions:nil urlSchemeSuffix:nil
                                            tokenCacheStrategy:[[FBSessionTokenCachingStrategy alloc] initWithUserDefaultTokenInformationKeyName:@"FBAccessTokenInformationKey"]];
-            
-            // determine if we are logged in or not
-            // currently I will be satisfied if username is set and all the cookies are in place.
-            if (self.fbSession.isOpen)
-            {
-                if([self validateCookies])
-                {
-                    _userStatus = UserStatusLoggedIn;
-                }
-                else
-                {
-                    
-                }
-            }
-
-            else
-            {
-                _userStatus = UserStatusNotLoggedIn;
-            }
         }
     }
     else
@@ -253,7 +233,6 @@ NSString * const SESSION_KEY_AUTH_TOKEN = @"auth_token";
         {
             case 200:
             {
-                _userStatus = UserStatusLoggedIn;
                 if(result != nil)
                 {
                     NSDictionary *playerDictionary = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
@@ -275,5 +254,11 @@ NSString * const SESSION_KEY_AUTH_TOKEN = @"auth_token";
         }
     }
 }
+
+- (UserStatus) userStatus
+{
+    return self.authToken ? UserStatusLoggedIn : UserStatusNotLoggedIn;
+}
+
 @end
 

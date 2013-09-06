@@ -8,7 +8,6 @@
 
 #import "ManagerViewController.h"
 #import "UIImageViewAdditions.h"
-#import "UserViewController.h"
 #import "UserSession.h"
 
 @interface ManagerViewController ()
@@ -18,6 +17,7 @@
 @implementation ManagerViewController
 
 @synthesize userViewController;
+@synthesize gameViewController;
 
 - (void)viewDidLoad
 {
@@ -25,6 +25,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     userViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UserViewController"];
+
+    userViewController.delegate = self;
+    
+    gameViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
     
     // Check if user is logged in, otherwise redirect to login
     if([UserSession sharedInstance].userStatus != UserStatusLoggedIn)
@@ -33,7 +37,7 @@
     }
     else
     {
-        
+        [self.view addSubview:gameViewController.view];
     }
 
 }
@@ -42,6 +46,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UserViewControllerDelegate overrides & callbacks
+
+- (void) loginSuccessful
+{
+    [userViewController.view removeFromSuperview];
+    
+    [self.view addSubview:gameViewController.view];
+}
+
+- (void) cancelLogin
+{
+    
 }
 
 @end

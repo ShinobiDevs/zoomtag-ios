@@ -62,7 +62,7 @@ NSString * const PLAYER_KEY_SCORE =              @"score";
     return self;
 }
 
-- (NSDictionary*)contentsToDictionary
+- (NSDictionary*)contentsTodictionary
 {
     NSMutableDictionary* dict = [NSMutableDictionary new];
     
