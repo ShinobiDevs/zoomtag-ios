@@ -11,6 +11,7 @@
 NSString * const PLAYER_KEY_ID =                 @"id";
 NSString * const PLAYER_KEY_NAME =               @"name";
 NSString * const PLAYER_KEY_PROFILE_PICTURE =    @"profile_picture";
+NSString * const PLAYER_KEY_SCORE =              @"score";
 
 @implementation Player
 
@@ -53,23 +54,34 @@ NSString * const PLAYER_KEY_PROFILE_PICTURE =    @"profile_picture";
             self.id = [dict objectForKey:PLAYER_KEY_ID];
             self.name = [dict objectForKey:PLAYER_KEY_NAME];
             self.profilePictureUrlString = [dict objectForKey:PLAYER_KEY_PROFILE_PICTURE];
+            self.score = [[dict objectForKey:PLAYER_KEY_SCORE] intValue];
         }
-        
-        /*
-         // validate fields
-         if(nil == gig_id)
-         {
-         // MIKI - throw exception in my opinion
-         gig_id = [NSNumber numberWithInt:1];
-         }
-         
-         if (nil == gigDeliveryDays)
-         {
-         gigDeliveryDays = [NSNumber numberWithInt:0];
-         }
-         */
+    
     }
     
     return self;
 }
+
+- (NSDictionary*)contentsTodictionary
+{
+    NSMutableDictionary* dict = [NSMutableDictionary new];
+    
+    if (self.id)
+    {
+        [dict setObject:self.id forKey:PLAYER_KEY_ID];
+    }
+    if (self.name)
+    {
+        [dict setObject:self.name forKey:PLAYER_KEY_NAME];
+    }
+    if (self.profilePictureUrlString)
+    {
+        [dict setObject:self.profilePictureUrlString forKey:PLAYER_KEY_PROFILE_PICTURE];
+    }
+    
+    [dict setObject:[NSNumber numberWithInt:self.score] forKey:PLAYER_KEY_SCORE];
+    
+    return dict;
+}
+
 @end

@@ -45,8 +45,6 @@
 {
     // this button's job is to flip-flop the session from open to closed
     UserSession* userSession = [UserSession sharedInstance];
-
-    [userSession.fbSession closeAndClearTokenInformation];
     
     if (userSession.fbSession.state != FBSessionStateCreated)
     {
@@ -62,6 +60,18 @@
                                                      NSError *error)
     {
         [[UserSession sharedInstance] connectWithFacebook];
+        
+        [MBDispatch MBDispatchASyncTo:dispatch_get_main_queue() DispatchBlock:^
+         {
+             if ([UserSession sharedInstance].userStatus == UserStatusLoggedIn)
+             {
+                 [self.delegate loginSuccessful];
+             }
+             else
+             {
+                 [self.delegate cancelLogin];
+             }
+         }];
     }];
 }
 @end

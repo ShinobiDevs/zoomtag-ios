@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ObjectToDictionary.h"
 
-@interface Player : NSObject
+@interface Player : NSObject <ObjectToDictionary>
 
 @property (nonatomic, copy) NSNumber* id;
 @property (nonatomic) NSString* name;
