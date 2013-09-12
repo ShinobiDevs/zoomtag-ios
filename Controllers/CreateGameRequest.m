@@ -53,19 +53,15 @@
         [request setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
         [request setHTTPMethod:@"POST"];
         
-        NSURLResponse *response = nil;
+        NSHTTPURLResponse *response = nil;
         NSError* error = nil;
         
         //Synchronous call
         NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         
-        request = nil;
-        response = nil;
-        error = nil;
-        
         [self doneProcessing];
         
-        if(result != nil)
+        if(error == nil && response && response.statusCode == 200 && result != nil)
         {
             NSDictionary* dictJson = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
             
