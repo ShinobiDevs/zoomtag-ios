@@ -23,7 +23,7 @@
     {
         _opponent = iOpponent;
         
-        NSString* urlString = [NSString stringWithFormat:@"%@/%@?player2_id=%@&auth_token=%@", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.opponent.id, [UserSession sharedInstance].authToken];
+        NSString* urlString = [NSString stringWithFormat:@"%@/%@?game[player2_id]=%@&auth_token=%@", [MBGlobalDefaults sharedInstance].serverUrlString, kGameUrlString, self.opponent.id, [UserSession sharedInstance].authToken];
         
         NSDLog(@"create game request for url:%@", urlString);
         

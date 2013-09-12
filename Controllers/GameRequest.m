@@ -55,13 +55,10 @@
         //Synchronous call
         NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         
-        request = nil;
-        response = nil;
-        error = nil;
         
         [self doneProcessing];
         
-        if(response && response.statusCode == 200 && result != nil)
+        if(error == nil && response && response.statusCode == 200 && result != nil)
         {
             NSArray *arrayJsonPages = (NSArray*)[NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:nil];
             
