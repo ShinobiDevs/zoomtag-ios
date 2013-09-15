@@ -111,6 +111,11 @@
         CGRect visibleRect = self.visibleRect;
         int firstImage = [self imageIndexForPoint:visibleRect.origin];
         int lastImage = [self imageIndexForPoint:CGPointMake(visibleRect.size.width, visibleRect.origin.y + visibleRect.size.height + imageSize)];
+        if (firstImage < 0)
+        {
+            firstImage = 0;
+        }
+        
         if (lastImage > [imageUrlArray count])
         {
             lastImage = [imageUrlArray count];
@@ -163,18 +168,6 @@
     [super layoutSubviews];
 }
 
-//- (void) setGigCollection:(FiverrGigCollection *)aGigCollection
-//{
-//    gigCollection = aGigCollection;
-//    lastGigShowing = firstGigShowing = 0;
-//    self.contentSize = CGSizeMake(self.width, ([gigCollection gigCount]/NCOLS+1) * (imageSize + MARGIN));
-//    self.contentOffset = CGPointZero;
-//    for (UIView *iv in self.contentViews) {
-//        [iv removeFromSuperview];
-//    }
-//    [self setNeedsLayout];
-//}
-
 - (void) becomeActive
 {
     self.contentSize = CGSizeMake(self.width, ([imageUrlArray count]/NCOLS+1) * (imageSize + MARGIN));
@@ -191,30 +184,30 @@
     return self;
 }
 
-//- (void) tappedGig:(FiverrGig*)gig inView:(UIView*)view
-//{
-//    id vc = self.viewController;
-//    if ([vc respondsToSelector:@selector(tappedGig:inView:)])
-//    {
-//        self.userInteractionEnabled = NO;
-//        [vc tappedGig:gig inView:view];
-//    }
-//}
+- (void) tappedImage:(NSString*)image inView:(UIView*)view
+{
+    id vc = self.viewController;
+    if ([vc respondsToSelector:@selector(tappedGig:inView:)])
+    {
+        self.userInteractionEnabled = NO;
+        //[vc tappedGig:gig inView:view];
+    }
+}
 
-//- (void) tap:(UITapGestureRecognizer*)rec
-//{
-//    if (rec.state == UIGestureRecognizerStateRecognized)
-//    {
-//        CGPoint where = [rec locationInView:self];
-//        int gigIndex = [self gigIndexForPoint:where];
-//        if (gigIndex >= 0 && gigIndex < [gigCollection gigCount])
-//        {
-//            FiverrGig *gig = [gigCollection gigAtIndex:gigIndex];
-//            if (gig)
-//            {
-//                [self tappedGig:gig inView:[self viewWithTag:gigIndex+10000]];
-//            }
-//        }
-//    }
-//}
+- (void) tap:(UITapGestureRecognizer*)rec
+{
+    if (rec.state == UIGestureRecognizerStateRecognized)
+    {
+        CGPoint where = [rec locationInView:self];
+        int imageIndex = [self imageIndexForPoint:where];
+        if (imageIndex >= 0 && imageIndex < [imageUrlArray count])
+        {
+            NSString* imageUrl = [imageUrlArray objectAtIndex:imageIndex];
+            if (imageUrl)
+            {
+                [self tappedImage:imageUrl inView:[self viewWithTag:imageIndex+10000]];
+            }
+        }
+    }
+}
 @end

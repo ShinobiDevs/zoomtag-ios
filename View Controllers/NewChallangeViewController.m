@@ -41,6 +41,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [searchBar resignFirstResponder];
     [[QueuedOperationManager sharedInstance] requestPhotoBankForTerm:searchBar.text CustomData:nil Delegate:self];
 }
 
