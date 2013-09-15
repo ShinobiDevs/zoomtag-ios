@@ -38,6 +38,7 @@
     else
     {
         [self.view addSubview:gameViewController.view];
+        [gameViewController becomeActive];
     }
 
 }
@@ -53,8 +54,8 @@
 - (void) loginSuccessful
 {
     [userViewController.view removeFromSuperview];
-    
     [self.view addSubview:gameViewController.view];
+    [gameViewController becomeActive];
 }
 
 - (void) cancelLogin

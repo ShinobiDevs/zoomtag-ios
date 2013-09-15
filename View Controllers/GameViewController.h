@@ -28,4 +28,6 @@
 
 - (IBAction)showFBFriendsPressed:(id)sender;
 - (IBAction)playWithFriendPressed:(id)sender;
+
+- (void) becomeActive;
 @end

@@ -25,9 +25,13 @@
         fbFriendsViewNib = [UINib nibWithNibName:@"FBFriendsView" bundle:[NSBundle mainBundle]];
         
         gameCollection = [[GameCollection alloc] initWithDelegate:self];
-        [gameCollection cacheGames:NO];
     }
     return self;
+}
+
+- (void) becomeActive
+{
+    [gameCollection cacheGames:NO];
 }
 
 - (void)viewDidLoad
