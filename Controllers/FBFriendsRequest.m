@@ -10,7 +10,7 @@
 #import "Player.h"
 #import "UserSession.h"
 
-#define kFBFriendsUrlString @"friends.json" // ? auth_token = "fdsfsdgsdfds"
+#define kFBFriendsUrlString @"friends.json"
 
 @implementation FBFriendsRequest
 
@@ -20,7 +20,7 @@
     
     if (self)
     {
-        NSString* urlString = [NSString stringWithFormat:@"%@/%@?&auth_token=%@", [MBGlobalDefaults sharedInstance].serverUrlString, kFBFriendsUrlString, [UserSession sharedInstance].authToken];
+        NSString* urlString = [NSString stringWithFormat:@"%@/%@?auth_token=%@", [MBGlobalDefaults sharedInstance].serverUrlString, kFBFriendsUrlString, [UserSession sharedInstance].authToken];
         
         NSDLog(@"facebook friends request for url:%@", urlString);
         

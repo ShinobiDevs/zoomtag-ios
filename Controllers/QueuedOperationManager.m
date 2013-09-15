@@ -88,6 +88,18 @@
     return request;
 }
 
+- (RequestBase*) requestPhotoBankForTerm:(NSString*)searchTerm CustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate
+{
+    PhotoBankRequest * request = [[PhotoBankRequest alloc] initWithSearchTerm:searchTerm Delegate:delegate];
+    
+    request.customData = customData;
+    
+    [request setQueuePriority:NSOperationQueuePriorityHigh];
+    [self addOperation:request];
+    
+    return request;
+}
+
 - (MultiRecipientOperation*) findOperationInQueue:(MultiRecipientOperation*)operation
 {
     // see if there is already a request in the queue for this url

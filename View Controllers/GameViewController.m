@@ -15,6 +15,7 @@
 @implementation GameViewController
 
 @synthesize gameViewDict;
+@synthesize challangeNewViewController;
 
 - (id)initWithCoder:(NSCoder*)coder
 {
@@ -47,6 +48,27 @@
     [[QueuedOperationManager sharedInstance] requestFBFriendsForCustomData:nil Delegate:self];
 }
 
+- (IBAction)playWithFriendPressed:(id)sender
+{
+    UIButton *btn = (UIButton*)sender;
+    GameView* gameView = (GameView*)btn.superview;
+    [self loadChallangeForGame:gameView.game];
+}
+
+- (void) loadChallangeForGame:(Game*)game
+{
+    if (game.waiting_to_challenge)
+    {
+        if (!challangeNewViewController)
+        {
+            challangeNewViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewChallangeViewController"];
+        }
+        
+        challangeNewViewController.game = game;
+        [self.view addSubview:challangeNewViewController.view];
+    }
+    
+}
 
 #pragma mark - private methods
 

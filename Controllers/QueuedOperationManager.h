@@ -11,11 +11,12 @@
 #import "GameRequest.h"
 #import "CreateGameRequest.h"
 #import "FBFriendsRequest.h"
+#import "PhotoBankRequest.h"
 #import "Player.h"
 
 // ****** NOTE ********
 // delegate calls will most likely be made not from the main thread
-@protocol QueuedOperationManagerDelegate <UrlDataRequestDelegate, GameRequestDelegate, CreateGameRequestDelegate, FBFriendsRequestDelegate>
+@protocol QueuedOperationManagerDelegate <UrlDataRequestDelegate, GameRequestDelegate, CreateGameRequestDelegate, FBFriendsRequestDelegate, PhotoBankRequestDelegate>
 @end
 
 typedef id<QueuedOperationManagerDelegate> ID_CONFORMS_MANAGER_DELEGATE;
@@ -36,8 +37,8 @@ typedef id<QueuedOperationManagerDelegate> ID_CONFORMS_MANAGER_DELEGATE;
 - (RequestBase*) requestDataForUrlString:(NSString*)urlString CustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)iDelegate;
 - (RequestBase*) requestGamesForPage:(NSNumber*)iPageNum CustomData:(id)customData RequestDelegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate;
 - (RequestBase*) requestGameForOpponent:(Player*)iOpponent CustomData:(id)customData RequestDelegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate;
-
 - (RequestBase*) requestFBFriendsForCustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate;
+- (RequestBase*) requestPhotoBankForTerm:(NSString*)searchTerm CustomData:(id)customData Delegate:(ID_CONFORMS_MANAGER_DELEGATE)delegate;
 
 - (MultiRecipientOperation*) findOperationInQueue:(MultiRecipientOperation*)operation;
 - (void) addOperation:(MultiRecipientOperation*)operation;

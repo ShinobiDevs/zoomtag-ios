@@ -18,6 +18,8 @@
     #import "MBGlobalDefaults.h"
     #import "MBNSString.h"
     #import "MBDispatch.h"
+    #import "NSDictionaryAdditions.h"
+    #import "UIScrollViewAdditions.h"
 #endif
 
 #if defined(DEBUG) || defined(ADHOC)
