@@ -151,7 +151,7 @@
 
 - (void)createGameRequestFinished:(Game*)game
 {
-    int a = 1;
+    [self loadChallangeForGame:game];
 }
 
 - (void)createGameRequestError
